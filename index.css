@@ -6,15 +6,50 @@
 
 h1 {
   text-align: center;
-  margin: 0.67em;
+  padding: 1rem;
 }
 
-.parties,
 h2 {
   margin: 0.83em;
 }
 
+main {
+  display: grid;
+  gap: 1rem;
+}
+
+section {
+  padding: 0 1rem;
+}
+
 .parties {
-  display: flex;
-  flex-direction: column;
+  list-style: none;
+  display: grid;
+  gap: 1ch;
+}
+
+.parties a {
+  color: unset;
+  text-decoration: unset;
+
+  display: block;
+  width: 100%;
+  border: 1px solid #eee;
+  border-radius: 0.25rem;
+  padding: 1ch;
+}
+
+.parties a:hover {
+  background: #eee;
+}
+
+.party {
+  display: grid;
+  gap: 1ch;
+}
+
+@media (width > 600px) {
+  main {
+    grid-template-columns: 1fr 1fr;
+  }
 }
